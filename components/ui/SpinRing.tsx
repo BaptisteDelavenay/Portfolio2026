@@ -9,12 +9,13 @@ interface OrbitIcon {
 
 interface SpinLogoProps {
   radius: number;
+  color:string,
   duration?: number;
   reverse?: boolean;
   icons?: OrbitIcon[];
 }
 
-export default function SpinRing({ radius, duration = 20, reverse = false, icons = [] }: SpinLogoProps) {
+export default function SpinRing({ radius, color, duration = 20, reverse = false, icons = [] }: SpinLogoProps) {
   const size = radius * 2;
   const strokeWidth = 1;
   const r = radius - strokeWidth / 2;
@@ -28,7 +29,7 @@ export default function SpinRing({ radius, duration = 20, reverse = false, icons
           cy={radius}
           r={r}
           fill="none"
-          stroke="currentColor"
+          stroke={color}
           strokeWidth={strokeWidth}
           strokeDasharray="4 8"
           className="text-neutral-300"

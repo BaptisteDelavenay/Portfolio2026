@@ -12,20 +12,23 @@ export default function SpinLogo() {
     // se centre tout seul et les anneaux ne débordent plus hors de la page
     <div className="relative grid place-items-center">
       <SpinRing
-        radius={150}
+        radius={120}
         duration={25}
+        color="#706F6F"
+        reverse
         icons={[
-          { icon: <TechIcon id="React" />, angle: 0 },
-          { icon: <TechIcon id="JavaScript" />, angle: 120 },
-          { icon: <TechIcon id="tailwindCSS" />, angle: 240 },
+          { icon: <TechIcon id="NextJS" />, angle: 0 },
+          { icon: <TechIcon id="TypeScript" />, angle: 90 },
+          { icon: <TechIcon id="ClaudeCode" />, angle: 180 },
+          { icon: <TechIcon id="tailwindCSS" />, angle: 270 },
         ]}
       />
       {/* anneau interne superposé, centré sur le même point */}
       <div className="absolute inset-0 grid place-items-center">
         <SpinRing
-          radius={80}
+          radius={50}
           duration={15}
-          reverse
+          color="#A6A6A6"
           icons={[
             { icon: <TechIcon id="Figma" />, angle: 180 },
             { icon: <TechIcon id="Git" />, angle: 0 },
